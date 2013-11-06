@@ -7,10 +7,11 @@
   <property name="title" i18n:translate="">Banner</property>
   <property name="description" i18n:translate="">A banner</property>
   <property name="content_icon">++resource++sc.banner/banner_icon.png</property>
-  <property name="allow_discussion">True</property>
+  <property name="allow_discussion">False</property>
+  <property name="immediate_view">banner_redirect_view</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
-  <property name="allowed_content_types"></property>
+  <property name="allowed_content_types" />
 
   <!-- schema interface and class used for content items -->
   <property name="schema">sc.banner.interfaces.IBanner</property>
@@ -27,10 +28,10 @@
   </property>
 
   <!-- View information -->
-  <property name="default_view">view</property>
+  <property name="default_view">banner_redirect_view</property>
   <property name="default_view_fallback">False</property>
   <property name="view_methods">
-    <element value="view" />
+    <element value="banner_redirect_view" />
   </property>
 
   <!-- Method aliases -->

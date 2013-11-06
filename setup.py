@@ -39,6 +39,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'plone.api',
         'plone.app.dexterity [grok]',
         'plone.app.referenceablebehavior',
         'plone.dexterity',
