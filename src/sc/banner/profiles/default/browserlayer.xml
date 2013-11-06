@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="sc.banner"
+      interface="sc.banner.interfaces.IBrowserLayer"
+      />
+</layers>

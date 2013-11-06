@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="sc.banner">
+
+  <includeDependencies package="." />
+
+  <permission
+      id="sc.banner.AddBanner"
+      title="sc.banner: Add Banner"
+      />
+
+  <include file="profiles.zcml" />
+
+  <browser:resourceDirectory
+      name="sc.banner"
+      directory="static"
+      />
+
+</configure>
