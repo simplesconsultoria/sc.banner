@@ -2,10 +2,10 @@ language: python
 python: 2.7
 env:
   global:
-    - ARTIFACTS_AWS_REGION=sa-east-1
     - ARTIFACTS_S3_BUCKET=sc-banner
-    - secure: "Ll2tTrfw0vpGlk+tfdcOD8HOylIWlyFDtNL+ShfQtAZ9wHZEOFJJyVsaSpDbdgWD1Y+muSz8I9xcvNY7ag17jm8udSEWecGaMIodeHB5hIklEi/OovKoAUgPqaVtbNE/FtyURZf7KE+Nb7zCege6XjCD635U4W2P1/072aEY3CU="
-    - secure: "bPiRnG3qFbWjD1zgVcTJAcOy8uuUwLKDIaVe15L6M5xLz49SfHFe6Zwc8jQ0g4J9xIDRqX4gcLnJffr0xJmBytXZGohFCjQRPUFruoy/stWWOrdgYT+9Jm9/TbVwoh+Cudo5iTNdIsaVnzcA6IyuTae/i9CJ9QQ7MBKyrjRV+T4="
+    - ARTIFACTS_AWS_REGION=sa-east-1
+    - secure: "CRwkMQIEM2ag353HAB8+TE5RXhMxjmG0DaSwmt4tL2/b3EohdyIgW08UANCluu0Ndgc4Y/BabYsbrLGAFHRbxWJ6c5NhNMxMH0JucRfus2ic+44s1LNZgeYXFNIGERWZonTty6bMK5djH+fAZTi+SDl3BsbU8Kd8fscuMiembNE="
+    - secure: "Vi1dt46onzBJQ6wUv2PsvcBuNCjoT4fmcN+WOC41A/RyGXlpgdBRScJM84b6c36TpKiV9WWNhU2JUgBGTjCz558BNBVtMk9MUUMEZSrq7Dt9Up8F0kmEjS9la4DsJZLCA0nMfb6SrgUeGu6UUF1KKpH7I9Aus+kyJT19BGrNq1U="
   matrix:
     - PLONE_VERSION=4.3
 install:
