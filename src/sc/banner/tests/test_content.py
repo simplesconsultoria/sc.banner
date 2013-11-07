@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from sc.banner.interfaces import IBanner
-from sc.banner.testing import INTEGRATION_TESTING
+from plone import api
 from plone.app.referenceablebehavior.referenceable import IReferenceable
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.uuid.interfaces import IAttributeUUID
+from sc.banner.interfaces import IBanner
+from sc.banner.testing import INTEGRATION_TESTING
 from zope.component import createObject
 from zope.component import queryUtility
 
@@ -20,10 +19,9 @@ class ContentTypeTestCase(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
 
-        setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.portal.invokeFactory('Folder', 'test-folder')
-        setRoles(self.portal, TEST_USER_ID, ['Member'])
-        self.folder = self.portal['test-folder']
+        with api.env.adopt_roles(['Manager']):
+            self.portal.invokeFactory('Folder', 'test-folder')
+            self.folder = self.portal['test-folder']
 
         self.folder.invokeFactory('Banner', 'Banner')
         self.Banner = self.folder['Banner']
