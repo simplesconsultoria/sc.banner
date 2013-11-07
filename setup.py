@@ -3,7 +3,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.1'
+version = '1.0b1'
 description = 'A Dexterity-based content type representing a banner: an image with a link.'
 long_description = (
     open('README.rst').read() + '\n' +
