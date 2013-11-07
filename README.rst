@@ -8,7 +8,7 @@ sc.banner
 Life, the Universe, and Everything
 ----------------------------------
 
-A Dexterity-based content type representing a banner.
+A Dexterity-based content type representing a banner: an image with a link.
 
 Mostly Harmless
 ---------------
@@ -50,6 +50,17 @@ Check the box next to ``sc.banner`` and click the 'Activate' button.
 Usage
 ^^^^^
 
-A banner is a content type described by an image and a link.
+A Banner is a content type with the same behavior of the standard Link,
+containing an aditional image field.
+
+When accessing a Banner, you have two behaviors: if the user has permission to
+edit the object, she will see the default view of the object with a status
+message on top.
+
+If the user has no permission to edit the object, she will be redirected to
+the URL stored in the Banner.
+
+A Banner should point to an external URL and only 'http' and 'https' schemes
+are allowed by design.
 
 .. _`opening a support ticket`: https://github.com/simplesconsultoria/sc.banner/issues
