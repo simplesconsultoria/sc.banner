@@ -8,6 +8,16 @@ from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
 
+def create_image(width, height):
+    from PIL import Image
+    from StringIO import StringIO
+    size, color = (width, height), (255, 0, 0)
+    image = Image.new('RGBA', size, color)
+    output = StringIO()
+    image.save(output, format='PNG')
+    return output.getvalue()
+
+
 class Fixture(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
@@ -18,8 +28,9 @@ class Fixture(PloneSandboxLayer):
         self.loadZCML(package=sc.banner)
 
     def setUpPloneSite(self, portal):
-        self.applyProfile(
-            portal, 'sc.banner:default')
+        self.applyProfile(portal, 'sc.banner:default')
+        # the following image is used on Robot Framework tests
+        open('/tmp/banner.jpg', 'w').write(create_image(728, 90))
 
 
 FIXTURE = Fixture()
