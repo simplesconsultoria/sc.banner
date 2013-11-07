@@ -24,8 +24,8 @@ after_success:
 after_failure:
   - bin/buildout annotate -c travis.cfg
   - firefox -v
-  - gem install travis-artifacts -q
-  - travis-artifacts upload --path parts/test
+#  - gem install travis-artifacts -q
+#  - travis-artifacts upload --path parts/test
 notifications:
   irc:
     channels: irc.freenode.org#simplesconsultoria
